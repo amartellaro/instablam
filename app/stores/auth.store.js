@@ -10,10 +10,10 @@ export default class AuthStore {
         })
     }
     @action
-    SignIn({email, password}) {
+    signIn({email, password}) {
         if(this.authUser) {
             return Promise.resolve(this.authUser)
         }
-        return firebase.auth().signInWithEmailAndPassword(email, password)
+        return firebase.auth().signInWithEmailAndPassword(email.trim(), password)
     }
 }
