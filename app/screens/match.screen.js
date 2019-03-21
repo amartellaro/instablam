@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
     Container,
     Content,
@@ -13,12 +13,14 @@ export default class MatchScreen extends Component {
     constructor(props) {
         super(props);
     }
+
     static navigationOptions = ({navigation}) => ({
         headerRight: <Button transparent
             onPress={() => navigation.navigate('Post')}>
                 <Icon name='camera' style={{color: "#fff"}} size={28}/>
             </Button>
     })
+    
     render() {
         return (
             <Container>

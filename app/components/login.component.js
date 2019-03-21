@@ -18,16 +18,20 @@ export default class Login extends Component {
     constructor(props) {
         super(props)
     }
+
     signIn() {
-        const { auth } = this.props.stores
-        const { navigate } = this.props.navigation
+        const { auth } = this.props.stores;
+        const { navigate } = this.props.navigation;
+
         auth.signIn({email: this.email, password: this.password})
             .then(() => {
                 navigate('Match')
             })
     }
+
     render() {
-        const { auth } = this.props.stores
+        const { auth } = this.props.stores;
+        
         return (
             <Form>
                 <Item style={{marginBottom: 10}} rounded>

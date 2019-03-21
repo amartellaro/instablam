@@ -6,14 +6,17 @@ export default class AuthStore {
 
     constructor() {
         firebase.auth().onAuthStateChanged((user) => {
-            this.authUser = user
+            this.authUser = user;
         })
     }
+
     @action
+
     signIn({email, password}) {
         if(this.authUser) {
-            return Promise.resolve(this.authUser)
+            return Promise.resolve(this.authUser);
         }
-        return firebase.auth().signInWithEmailAndPassword(email.trim(), password)
+
+        return firebase.auth().signInWithEmailAndPassword(email.trim(), password);
     }
 }

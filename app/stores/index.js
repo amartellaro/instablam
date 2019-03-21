@@ -1,7 +1,7 @@
-import ConfigStore from './config.store'
-import AuthStore from './auth.store'
+import ConfigStore from './config.store';
+import AuthStore from './auth.store';
 
-const config = new ConfigStore()
-const auth = new AuthStore()
+const config = new ConfigStore();
+const auth = new AuthStore();
 
-export default {config, auth}
+export default {config, auth};

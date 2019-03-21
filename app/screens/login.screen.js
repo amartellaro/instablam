@@ -17,8 +17,10 @@ export default class LoginScreen extends Component {
     constructor(props) {
         super(props)
     }
+    
     render() {
-        const {stores} = this.props
+        const {stores} = this.props;
+
         return (
             <Container>
                 <View style={styles.container}>
